@@ -11,8 +11,8 @@ public class VacantSeatPage {
 
     public ElementsCollection cinemaSeat = $$("div.seat");
 
-    public SelenideElement filmName = $(By.cssSelector(".movie-title"));
+    public SelenideElement filmName = $(By.xpath("//div[@class='content-header']//p[@class='movie-title']"));
 
-    public ElementsCollection cinemaName = $$(By.cssSelector(".movie-cinema"));
+    public ElementsCollection cinemaName = $$(By.xpath("//div[@class='content-header']//p[@class='movie-cinema']"));
 
 }

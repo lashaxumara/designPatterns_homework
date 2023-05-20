@@ -3,6 +3,7 @@ package WithOutFactoryStepObj;
 import WithOutFactoryPageObj.VacantSeatPage;
 import org.openqa.selenium.WebElement;
 
+import static com.codeborne.selenide.Selenide.Wait;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class VacantSeatStep extends VacantSeatPage {
@@ -17,7 +18,8 @@ public class VacantSeatStep extends VacantSeatPage {
     }
 
     public String getFilmName(){
-        return filmName.getText();
+        Wait().until(driver -> filmName.isDisplayed());
+        return  filmName.getText();
     }
 
     public String getCinemaName(){

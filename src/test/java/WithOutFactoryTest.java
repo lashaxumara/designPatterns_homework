@@ -22,7 +22,7 @@ public class WithOutFactoryTest {
     @BeforeMethod
     public void specialSetup() {
         open("https://www.swoop.ge/");
-        Configuration.timeout=10000;
+        Configuration.timeout=15000;
 
     }
 
