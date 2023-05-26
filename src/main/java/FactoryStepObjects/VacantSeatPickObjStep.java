@@ -1,6 +1,7 @@
 package FactoryStepObjects;
 
 import FactoryPageObjects.VacantSeatPickObjPage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -17,26 +18,26 @@ public class VacantSeatPickObjStep {
     VacantSeatPickObjPage vacantSeatPickObjPage;
 
     WebDriverWait wait;
-
-    public VacantSeatPickObjStep vacantSeat() {
+    @Step("Select vacant(seat) with value: {0}")
+    public VacantSeatPickObjStep vacantSeat(String seat) {
         for (WebElement singleSeat : vacantSeatPickObjPage.cinemaSeats) {
-            if (singleSeat.getAttribute("class").equals("seat free")) {
+            if (singleSeat.getAttribute("class").equals(seat)) {
                 js.executeScript("arguments[0].click();", singleSeat);
                 break;
             }
         }
         return this;
     }
-
+    @Step("Get Film name for assertion")
     public String getFilmName(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".movie-title")));
         return vacantSeatPickObjPage.filmName.getText();
     }
-
+    @Step("Get cinema name for assertion")
     public String getCinemaName(){
         return vacantSeatPickObjPage.cinema.get(0).getText();
     }
-
+    @Step("Get film date for assertion")
     public String getFilmDate(){
         String dateTimeString = vacantSeatPickObjPage.cinema.get(1).getText();
         String[] parts = dateTimeString.split(" ");

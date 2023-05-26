@@ -1,0 +1,1 @@
+{"uuid":"4098cd4b-45e1-4553-81f7-76422850e470","name":"FactoryTest.beforMethod","children":["a03ff8fd-d60f-4275-8f6e-60970f11ce24"],"description":"","befores":[{"name":"beforMethod","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1685136838652,"stop":1685136857621}],"afters":[],"start":1685136838651,"stop":1685136857622}

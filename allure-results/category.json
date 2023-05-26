@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Category 1",
+    "matchedStatuses": ["passed"],
+    "color": "green"
+  },
+  {
+    "name": "Category 2",
+    "matchedStatuses": ["failed", "broken"],
+    "color": "red"
+  },
+  {
+    "name": "Category 3",
+    "matchedStatuses": ["skipped"],
+    "color": "yellow"
+  },
+  {
+    "name": "Category with Trace",
+    "traceRegex": ".*trace.*",
+    "color": "blue"
+  }
+]

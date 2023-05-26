@@ -16,4 +16,5 @@ public class CaveaEastPointPage {
 
     public ElementsCollection caveaEastPointTitle = $$(By.xpath("//div[@id='384933']//div[@aria-hidden='false']//a//p[text()='კავეა ისთ ფოინთი']"));
 
+
 }
