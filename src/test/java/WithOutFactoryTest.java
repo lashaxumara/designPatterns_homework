@@ -23,6 +23,7 @@ public class WithOutFactoryTest {
     public void specialSetup() {
         open("https://www.swoop.ge/");
         Configuration.timeout=15000;
+        Configuration.holdBrowserOpen=true;
 
     }
 
